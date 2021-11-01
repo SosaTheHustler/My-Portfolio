@@ -89,6 +89,11 @@ nav{
     text-decoration: none;
     padding: 10px 25px;
     font-size: 20px;
+    color: white;
+}
+
+.nav_item a:active{
+    color: white;
 }
 
 
