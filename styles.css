@@ -224,6 +224,90 @@ PROJECT CARD
     color: gray;
 }
 
+/*****************
+CONTACT
+*************/
+
+#contact{
+    position: relative;
+    width: 100%;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5vw;
+    background-color: black;
+    color: black;
+}
+
+#contact .content{
+    max-width: 800px;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-size: 18x;
+}
+
+#contact .content h2{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.contact-form{
+    width: 60%;
+    padding: 40px;
+    background: white;
+}
+
+.contact-form .input-box{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact-form .input-box input, 
+.contact-form .input-box textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    resize: none;
+}
+
+.contact-form .input-box span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #707070;
+}
+
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box input:valid ~ span,
+.contact-form .input-box textarea:focus ~ span,
+.contact-form .input-box textarea:valid ~ span{
+    color: red;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contact-form .input-box input[type='submit']{
+    width: 200px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0);
+}
 @media screen and (max-width: 1000px){
     .intro{
         font-size: 8vw;
@@ -358,6 +442,9 @@ PROJECT CARD
     }
     .menu-closed{
         transform: translateX(100%);
+    }
+    .contact-form{
+        width: 100%;
     }
 }
 
