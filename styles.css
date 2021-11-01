@@ -33,13 +33,34 @@ html, body{
     position: relative;
 }
 */
+nav{
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+.burger{
+    display: none;
+}
 
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
 .home{
     display: flex;
     align-items: center;
     color: white;
     font-size: 8px;
     cursor: pointer;
+    letter-spacing: 2px;
 }
 
 .home h2{
@@ -53,10 +74,10 @@ html, body{
 
 .navbar{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 85%;
     margin: auto;
+    min-height: 8vh;
 }
 
 .nav_item{
@@ -66,7 +87,7 @@ html, body{
 
 .nav_item a{
     text-decoration: none;
-    padding: 40px 25px;
+    padding: 10px 25px;
     font-size: 20px;
 }
 
@@ -86,7 +107,7 @@ html, body{
     position: absolute;
     color: white;
     text-align: center;
-    font-size: 70px;
+    font-size: 5vw;
     top: 50%;
     width: 100%;
     transform: translateY(-50%)
@@ -200,7 +221,10 @@ PROJECT CARD
 
 @media screen and (max-width: 1000px){
     .intro{
-        font-size: 30px;
+        font-size: 8vw;
+    }
+    .home{
+        font-size: 1.5vw;
     }
     .banner{
         position: relative;
@@ -292,4 +316,63 @@ PROJECT CARD
     #projects{
         font-size: 4vw;
     }
+}
+
+@media screen and (max-width: 756px){
+    body{
+        overflow-x: hidden;
+    }
+    .menu{
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 8vh;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .menu li{
+        opacity: 0;
+    }
+
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-active{
+        transform: translateX(0%);
+    }
+    .menu-closed{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
 }
