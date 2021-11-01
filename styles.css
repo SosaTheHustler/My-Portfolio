@@ -325,7 +325,7 @@ PROJECT CARD
     .menu{
         position: absolute;
         right: 0px;
-        height: 100vh;
+        height: 20vh;
         top: 8vh;
         background: black;
         display: flex;
@@ -333,9 +333,11 @@ PROJECT CARD
         align-items: center;
         display: flex;
         justify-content: space-around;
-        width: 50%;
+        width:100%;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
+        box-shadow: 0px 0px 4px rgb(0, 0, 0);
+
     }
     .menu li{
         opacity: 0;
