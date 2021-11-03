@@ -2,6 +2,7 @@ const navSlide = () => {
    const burger = document.querySelector('.burger');
    const nav = document.querySelector('.menu');
    const navLinks = document.querySelectorAll('.menu li');
+   const clicks = document.querySelector('.nav-link')
 
    burger.addEventListener('click', () =>{
        //Toggle Nav
@@ -11,9 +12,17 @@ const navSlide = () => {
 
        
 
+       nav.addEventListener('click', ()=>{
+        nav.classList.remove('menu-active');
+        burger.classList.remove('toggle');
+        navLinks.forEach((link,index) =>{
+            link.style.animation = ''
+        });
 
+    });
 
        //Animate Links
+       
        navLinks.forEach((link,index) => {
            if (link.style.animation) {
                link.style.animation = '';
@@ -24,12 +33,11 @@ const navSlide = () => {
     });
        //Burger Animation
        burger.classList.toggle('toggle');
+       
+
 
     //Close Nav on click.
-    navLinks.addEventListener('click',() =>{
-        nav.classList.remove('menu-active')
-        burger.classList.remove('toggle');
-    })
+
    });       
 
 

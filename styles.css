@@ -143,7 +143,7 @@ PROJECTS
 
 #projects{
     position: relative;
-    top: 70px;
+    padding-top: 90px;
     width: 100%;
     text-align: center;
     font-weight: bolder;
