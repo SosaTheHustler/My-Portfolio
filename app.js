@@ -5,7 +5,13 @@ const navSlide = () => {
 
    burger.addEventListener('click', () =>{
        //Toggle Nav
+
        nav.classList.toggle('menu-active');
+
+
+       
+
+
 
        //Animate Links
        navLinks.forEach((link,index) => {
@@ -14,11 +20,21 @@ const navSlide = () => {
            } else {
                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`; 
            }
-       });
+
+    });
        //Burger Animation
        burger.classList.toggle('toggle');
-   });
+
+    //Close Nav on click.
+    navLinks.addEventListener('click',() =>{
+        nav.classList.remove('menu-active')
+        burger.classList.remove('toggle');
+    })
+   });       
+
 
 }
 
-navSlide();
+
+navSlide();        
+
