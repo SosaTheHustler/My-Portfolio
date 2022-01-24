@@ -46,6 +46,44 @@
         <h1>Projects</h1>
         <div class="card">
             <div class="card-img">
+                <img class='project-img' src="img/coming soon.png" alt="">
+            </div>
+            <div class="card-info">
+                <h5 class="card-title">HowTo</h5>
+                <p class="card-text">This is a Social Media based project.</p>
+                <p class="card-languages"><span class='languages'>Languages Used</span><br>
+                HTML<br> CSS<br> JavaScript/JQuery<br> Django Web Framework
+                </p>
+                <div class='buttons'>
+                    <a href="#projects" onclick="toggle();" class="card-button red">Video</a>
+                    <a href="https://github.com/SosaTheHustler/HowToProject" target='_blank' class="card-button">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class='movie_video'>
+            <video src="img/BF05214B-9460-4BF8-942D-C3A874560796.MP4" controls='true'></video>
+            <img onclick="toggle();" src='img/close.png' class='close'>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <img class='project-img' src="img/movie.PNG" alt="">
+            </div>
+            <div class="card-info">
+                <h5 class="card-title">Synamatic</h5>
+                <p class="card-text">This is a movie review website.</p>
+                <p class="card-languages"><span class='languages'>Languages Used</span><br>
+                React<br> Redux<br> JavaScript/JQuery
+                </p>
+                <div class='buttons'>
+                    <a href="https://synamatic.netlify.app/" target='_blank' class="card-button red">Live Demo</a>
+                    <a href="https://github.com/SosaTheHustler/Synamatic" target='_blank' class="card-button">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
                 <img class='project-img' src="img/twitter clone.PNG" alt="">
             </div>
             <div class="card-info">
@@ -57,23 +95,6 @@
                 <div class='buttons'>
                     <a href="https://twitter-clone-jeremy.herokuapp.com/" target='_blank' class="card-button red">Live Demo</a>
                     <a href="https://github.com/SosaTheHustler/Twitter-Clone" target='_blank' class="card-button">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img">
-                <img class='project-img' src="img/coming soon.png" alt="">
-            </div>
-            <div class="card-info">
-                <h5 class="card-title">HowTo</h5>
-                <p class="card-text">This is a Social Media based project.</p>
-                <p class="card-languages"><span class='languages'>Languages Used</span><br>
-                HTML<br> CSS<br> JavaScript/JQuery<br> Django Web Framework
-                </p>
-                <div class='buttons'>
-                    <a href="" target='_blank' class="card-button red">Live Demo</a>
-                    <a href="" target='_blank' class="card-button">GitHub</a>
                 </div>
             </div>
         </div>
@@ -107,5 +128,11 @@
         </div>
     </div>
     <script src="app.js"></script>
+    <script type='text/JavaScript'>
+        function toggle(){
+            var video= document.querySelector('.movie_video')
+            video.classList.toggle('active')
+        }
+    </script>
 </body>
 </html>
