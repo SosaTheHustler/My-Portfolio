@@ -132,6 +132,10 @@
         function toggle(){
             var video= document.querySelector('.movie_video')
             video.classList.toggle('active')
+            var video= document.querySelector('video')
+            video.classList.toggle('active')
+            video.pause();
+            video.currentTime=0;
         }
     </script>
 </body>
