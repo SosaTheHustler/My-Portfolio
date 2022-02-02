@@ -77,14 +77,6 @@ nav {
   width: 75px;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: auto;
-  min-height: 8vh;
-}
-
 .nav_item {
   display: inline-block;
   vertical-align: middle;
