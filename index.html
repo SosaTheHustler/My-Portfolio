@@ -57,12 +57,21 @@
                 <div class='buttons'>
                     <a href="https://how-to-jeremy.netlify.app/" target='_blank' class="card-button red">Live Demo</a>
                     <a href="https://github.com/SosaTheHustler/HowToProject" target='_blank' class="card-button">GitHub</a>
+                    <a href="#projects" onclick="toggle();" class="card-button video-button">Video</a>
                 </div>
             </div>
         </div>
         <div class='movie_video'>
-            <video src="img/BF05214B-9460-4BF8-942D-C3A874560796.MP4" controls='true'></video>
+            <video src="img/HowTo.mp4" controls='true'></video>
             <img onclick="toggle();" src='img/close.png' class='close'>
+        </div>
+        <div class='movie_video2'>
+            <video src="img/bandicam 2022-02-12 01-17-13-328.mp4" controls='true'></video>
+            <img onclick="toggle2();" src='img/close.png' class='close'>
+        </div>
+        <div class='movie_video3'>
+            <video src="img/Twitter_clone.mp4" controls='true'></video>
+            <img onclick="toggle3();" src='img/close.png' class='close'>
         </div>
 
         <div class="card">
@@ -78,6 +87,7 @@
                 <div class='buttons'>
                     <a href="https://synamatic.netlify.app/" target='_blank' class="card-button red">Live Demo</a>
                     <a href="https://github.com/SynamaticGroup/Synamatic" target='_blank' class="card-button">GitHub</a>
+                    <a href="#projects" onclick="toggle2();" class="card-button video-button">Video</a>
                 </div>
             </div>
         </div>
@@ -95,6 +105,7 @@
                 <div class='buttons'>
                     <a href="https://twitter-clone-jeremy.herokuapp.com/" target='_blank' class="card-button red">Live Demo</a>
                     <a href="https://github.com/SosaTheHustler/Twitter-Clone" target='_blank' class="card-button">GitHub</a>
+                    <a href="#projects" onclick="toggle3();" class="card-button video-button">Video</a>
                 </div>
             </div>
         </div>
@@ -131,6 +142,26 @@
     <script type='text/JavaScript'>
         function toggle(){
             var video= document.querySelector('.movie_video')
+            video.classList.toggle('active')
+            var video= document.querySelector('video')
+            video.classList.toggle('active')
+            video.pause();
+            video.currentTime=0;
+        }
+    </script>
+       <script type='text/JavaScript'>
+        function toggle2(){
+            var video= document.querySelector('.movie_video2')
+            video.classList.toggle('active')
+            var video= document.querySelector('video')
+            video.classList.toggle('active')
+            video.pause();
+            video.currentTime=0;
+        }
+    </script>
+       <script type='text/JavaScript'>
+        function toggle3(){
+            var video= document.querySelector('.movie_video3')
             video.classList.toggle('active')
             var video= document.querySelector('video')
             video.classList.toggle('active')
